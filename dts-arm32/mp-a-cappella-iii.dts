@@ -16,13 +16,13 @@
 		compatible = "simple-audio-card";
 		simple-audio-card,name = "Musica Pristina I2S Digital Out";
 		simple-audio-card,format = "i2s";
-		simple-audio-card,bitclock-master = <&mp_master>;
-		simple-audio-card,frame-master = <&mp_master>;
+		simple-audio-card,bitclock-master = <&mp_master_codec>;
+		simple-audio-card,frame-master = <&mp_master_codec>;
 		simple-audio-card,cpu {
 			sound-dai = <&sai2>;
 		};
 
-		mp_master: simple-audio-card,codec {
+		mp_master_codec: simple-audio-card,codec {
 			sound-dai = <&codec_mp>;
 		};
 	};
